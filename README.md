@@ -22,7 +22,10 @@ Do you think you don't have enough weaponary in your arsenal? Craft the autohamm
 
 # Version history:
 
-### 0.5 (Kryptonargon update) LATEST:
+### 0.5.0.1 (🤦‍♂️) LATEST:
+- Disabled debug mode
+
+### 0.5 (Pre-Hardmode completion update):
 - Kryptonite
 - Argonite
 
