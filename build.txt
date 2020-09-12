@@ -1,4 +1,4 @@
 displayName = [c/ff2211:Oresome!]
 author = TerraStag
-version = 0.5
+version = 0.5.0.1
 homepage = https://github.com/BlueStaggo/Oresome
