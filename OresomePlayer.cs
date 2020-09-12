@@ -7,7 +7,7 @@ namespace Oresome
 {
 	public class OresomePlayer : ModPlayer
 	{
-		private bool debug = true; // Toggle debug features
+		private bool debug = false; // Toggle debug features
 		
 		public bool kryptoniteSetBonus; // Kryptonite armor's set bonus
 
