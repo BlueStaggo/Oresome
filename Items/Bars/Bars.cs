@@ -89,4 +89,46 @@ namespace Oresome.Items.Bars
 			recipe.AddRecipe();
 		}
 	}
+	
+	// KRYPTONITE
+	
+	public class KryptoniteBar : ModItem
+	{
+		public override void SetDefaults() {
+			item.value = Item.sellPrice(silver: 3);
+			item.rare = 4;
+			item.maxStack = 999;
+			item.material = true;
+		}
+		
+		public override void AddRecipes() {
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.DemoniteBar, 1);
+			recipe.AddIngredient(ItemID.CrimtaneBar, 1);
+			recipe.AddTile(TileID.Autohammer);
+			recipe.SetResult(this, 2);
+			recipe.AddRecipe();
+		}
+	}
+	
+	// ARGONITE
+	
+	public class ArgoniteBar : ModItem
+	{
+		public override void SetDefaults() {
+			item.value = Item.sellPrice(silver: 3);
+			item.rare = 4;
+			item.maxStack = 999;
+			item.material = true;
+		}
+		
+		public override void AddRecipes() {
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.HellstoneBar, 1);
+			recipe.AddIngredient(ItemID.MeteoriteBar, 1);
+			recipe.AddTile(TileID.Autohammer);
+			recipe.SetResult(this, 2);
+			recipe.AddRecipe();
+		}
+	}
 }

@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
+using Oresome;
 
 namespace Oresome.Items.Armor
 {
@@ -382,6 +383,199 @@ namespace Oresome.Items.Armor
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemType<Bars.IridiumBar>(), 20);
+			recipe.AddTile(TileID.Autohammer);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
+	}
+	
+	// KRYPTONITE
+	
+	[AutoloadEquip(EquipType.Head)]
+	public class KryptoniteHood : ModItem
+	{
+		public override void SetStaticDefaults() {
+			Tooltip.SetDefault("Increases damage by 3%");
+		}
+
+		public override void SetDefaults() {
+			item.width = 18;
+			item.height = 18;
+			item.value = 10000;
+			item.rare = 4;
+			item.defense = 6;
+		}
+		
+		public override bool IsArmorSet(Item head, Item body, Item legs) {
+			return body.type == ItemType<KryptoniteBreastplate>() && legs.type == ItemType<KryptoniteLeggings>();
+		}
+        
+		public override void UpdateEquip(Player player) {
+			player.allDamage += 0.03f;
+		}
+
+		public override void UpdateArmorSet(Player player) {
+			player.setBonus = "Greatly increased life regen";
+			player.GetModPlayer<OresomePlayer>().kryptoniteSetBonus = true;
+		}
+
+		public override void AddRecipes() {
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemType<Bars.KryptoniteBar>(), 15);
+			recipe.AddTile(TileID.Autohammer);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
+	}
+	
+	[AutoloadEquip(EquipType.Body)]
+	public class KryptoniteBreastplate : ModItem
+	{
+		public override void SetStaticDefaults() {
+			Tooltip.SetDefault("Increases damage by 3%");
+		}
+
+		public override void SetDefaults() {
+			item.width = 18;
+			item.height = 18;
+			item.value = 10000;
+			item.rare = 4;
+			item.defense = 7;
+		}
+
+		public override void UpdateEquip(Player player) {
+			player.allDamage += 0.03f;
+		}
+
+		public override void AddRecipes() {
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemType<Bars.KryptoniteBar>(), 25);
+			recipe.AddTile(TileID.Autohammer);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
+	}
+	
+	[AutoloadEquip(EquipType.Legs)]
+	public class KryptoniteLeggings : ModItem
+	{
+		public override void SetStaticDefaults() {
+			Tooltip.SetDefault("Increases damage by 3%");
+		}
+
+		public override void SetDefaults() {
+			item.width = 18;
+			item.height = 18;
+			item.value = 10000;
+			item.rare = 4;
+			item.defense = 7;
+		}
+
+		public override void UpdateEquip(Player player) {
+			player.allDamage += 0.03f;
+		}
+
+		public override void AddRecipes() {
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemType<Bars.KryptoniteBar>(), 20);
+			recipe.AddTile(TileID.Autohammer);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
+	}
+	
+	// ARGONITE
+	
+	[AutoloadEquip(EquipType.Head)]
+	public class ArgoniteMask : ModItem
+	{
+		public override void SetStaticDefaults() {
+			Tooltip.SetDefault("Increases damage by 5%");
+		}
+
+		public override void SetDefaults() {
+			item.width = 18;
+			item.height = 18;
+			item.value = 10000;
+			item.rare = 4;
+			item.defense = 7;
+		}
+		
+		public override bool IsArmorSet(Item head, Item body, Item legs) {
+			return body.type == ItemType<ArgoniteBreastplate>() && legs.type == ItemType<ArgoniteGreaves>();
+		}
+        
+		public override void UpdateEquip(Player player) {
+			player.allDamage += 0.05f;
+		}
+
+		public override void UpdateArmorSet(Player player) {
+			player.setBonus = "10% increased movement speed";
+			player.moveSpeed += 0.10f;
+		}
+
+		public override void AddRecipes() {
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemType<Bars.ArgoniteBar>(), 15);
+			recipe.AddTile(TileID.Autohammer);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
+	}
+	
+	[AutoloadEquip(EquipType.Body)]
+	public class ArgoniteBreastplate : ModItem
+	{
+		public override void SetStaticDefaults() {
+			Tooltip.SetDefault("Increases damage and critical strike chance by 10%");
+		}
+
+		public override void SetDefaults() {
+			item.width = 18;
+			item.height = 18;
+			item.value = 10000;
+			item.rare = 4;
+			item.defense = 8;
+		}
+
+		public override void UpdateEquip(Player player) {
+			player.allDamage += 0.10f;
+			player.meleeCrit += 10;
+			player.rangedCrit += 10;
+			player.magicCrit += 10;
+		}
+
+		public override void AddRecipes() {
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemType<Bars.ArgoniteBar>(), 25);
+			recipe.AddTile(TileID.Autohammer);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
+	}
+	
+	[AutoloadEquip(EquipType.Legs)]
+	public class ArgoniteGreaves : ModItem
+	{
+		public override void SetStaticDefaults() {
+			Tooltip.SetDefault("Increases damage by 5%");
+		}
+
+		public override void SetDefaults() {
+			item.width = 18;
+			item.height = 18;
+			item.value = 10000;
+			item.rare = 4;
+			item.defense = 7;
+		}
+
+		public override void UpdateEquip(Player player) {
+			player.allDamage += 0.05f;
+		}
+
+		public override void AddRecipes() {
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemType<Bars.ArgoniteBar>(), 20);
 			recipe.AddTile(TileID.Autohammer);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

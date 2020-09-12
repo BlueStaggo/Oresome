@@ -124,4 +124,64 @@ namespace Oresome.Items.Tools
 			recipe.AddRecipe();
 		}
 	}
+	
+	// KRYPTONITE
+	
+	public class KryptonitePickaxe : ModItem
+	{
+		public override void SetDefaults() {
+			item.damage = 11;
+			item.melee = true;
+			item.width = 32;
+			item.height = 32;
+			item.useTime = 13;
+			item.useAnimation = 20;
+			item.pick = 99;
+			item.useStyle = 1;
+			item.knockBack = 3.5f;
+			item.value = 10000;
+			item.rare = 2;
+			item.UseSound = SoundID.Item1;
+			item.autoReuse = true;
+		}
+		
+		public override void AddRecipes() {
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemType<Items.Bars.KryptoniteBar>(), 12);
+			recipe.AddIngredient(ItemID.Wood, 4);
+			recipe.AddTile(TileID.Autohammer);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
+	}
+	
+	// ARGONITE
+	
+	public class ArgonitePickaxe : ModItem
+	{
+		public override void SetDefaults() {
+			item.damage = 12;
+			item.melee = true;
+			item.width = 32;
+			item.height = 32;
+			item.useTime = 13;
+			item.useAnimation = 20;
+			item.pick = 99;
+			item.useStyle = 1;
+			item.knockBack = 3.5f;
+			item.value = 10000;
+			item.rare = 2;
+			item.UseSound = SoundID.Item1;
+			item.autoReuse = true;
+		}
+		
+		public override void AddRecipes() {
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemType<Items.Bars.ArgoniteBar>(), 12);
+			recipe.AddIngredient(ItemID.Wood, 4);
+			recipe.AddTile(TileID.Autohammer);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
+	}
 }

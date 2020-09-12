@@ -128,4 +128,66 @@ namespace Oresome.Items.Tools
 			recipe.AddRecipe();
 		}
 	}
+	
+	// KRYPTONITE
+	
+	public class KryptoniteHamaxe : ModItem
+	{
+		public override void SetDefaults() {
+			item.damage = 18;
+			item.melee = true;
+			item.width = 50;
+			item.height = 40;
+			item.useTime = 16;
+			item.useAnimation = 29;
+			item.axe = 28;
+			item.hammer = 69;
+			item.useStyle = 1;
+			item.knockBack = 6.5f;
+			item.value = 10000;
+			item.rare = 2;
+			item.UseSound = SoundID.Item1;
+			item.autoReuse = true;
+		}
+
+		public override void AddRecipes() {
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemType<Items.Bars.KryptoniteBar>(), 9);
+			recipe.AddIngredient(ItemID.Wood, 3);
+			recipe.AddTile(TileID.Autohammer);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
+	}
+	
+	// ARGONITE
+	
+	public class ArgoniteHamaxe : ModItem
+	{
+		public override void SetDefaults() {
+			item.damage = 19;
+			item.melee = true;
+			item.width = 50;
+			item.height = 40;
+			item.useTime = 16;
+			item.useAnimation = 29;
+			item.axe = 28;
+			item.hammer = 69;
+			item.useStyle = 1;
+			item.knockBack = 6.5f;
+			item.value = 10000;
+			item.rare = 2;
+			item.UseSound = SoundID.Item1;
+			item.autoReuse = true;
+		}
+
+		public override void AddRecipes() {
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemType<Items.Bars.ArgoniteBar>(), 9);
+			recipe.AddIngredient(ItemID.Wood, 3);
+			recipe.AddTile(TileID.Autohammer);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
+	}
 }

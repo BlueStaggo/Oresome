@@ -126,7 +126,7 @@ namespace Oresome.Items.Weapons
 	public class IridiumClaymore : ModItem
 	{
 		public override void SetDefaults() {
-			item.damage = 19;
+			item.damage = 20;
 			item.melee = true;
 			item.width = 68;
 			item.height = 68;
@@ -145,7 +145,65 @@ namespace Oresome.Items.Weapons
 
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ModContent.ItemType<Items.Bars.IridiumBar>(), 16);
+			recipe.AddIngredient(ModContent.ItemType<Items.Bars.IridiumBar>(), 12);
+			recipe.AddTile(TileID.Autohammer);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
+	}
+	
+	// KRYPTONITE
+	
+	public class KryptoniteSword : ModItem
+	{
+		public override void SetDefaults() {
+			item.damage = 20;
+			item.melee = true;
+			item.width = 48;
+			item.height = 48;
+			item.useTime = 20;
+			item.useAnimation = 20;
+			item.useStyle = 1;
+			item.knockBack = 5;
+			item.value = Item.sellPrice(silver: 2, copper: 70);
+			item.rare = 4;
+			item.UseSound = SoundID.Item1;
+			item.autoReuse = true;
+			item.crit = 2;
+		}
+
+		public override void AddRecipes() {
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ModContent.ItemType<Items.Bars.KryptoniteBar>(), 8);
+			recipe.AddTile(TileID.Autohammer);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
+	}
+	
+	// ARGONITE
+	
+	public class ArgoniteSword : ModItem
+	{
+		public override void SetDefaults() {
+			item.damage = 20;
+			item.melee = true;
+			item.width = 48;
+			item.height = 48;
+			item.useTime = 20;
+			item.useAnimation = 20;
+			item.useStyle = 1;
+			item.knockBack = 5;
+			item.value = Item.sellPrice(silver: 2, copper: 70);
+			item.rare = 4;
+			item.UseSound = SoundID.Item1;
+			item.autoReuse = true;
+			item.crit = 2;
+		}
+
+		public override void AddRecipes() {
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ModContent.ItemType<Items.Bars.ArgoniteBar>(), 8);
 			recipe.AddTile(TileID.Autohammer);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
