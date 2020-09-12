@@ -7,10 +7,10 @@ Do you think you don't have enough weaponary in your arsenal? Craft the autohamm
 - Steel (Iron + Lead)
 - Osmite (Silver + Tungsten)
 - Iridium (Gold + Platinum)
-
-## COMING SOON
 - Kryptonite (Demonite + Crimtane)
 - Argonite (Hellstone + Meteorite)
+
+## COMING SOON
 - Rhodinite (Cobalt + Palladium)
 - Neptunium (Mythril + Orichalcum)
 - Scandite (Adamantite + Titanium)
@@ -22,16 +22,20 @@ Do you think you don't have enough weaponary in your arsenal? Craft the autohamm
 
 # Version history:
 
-### 0.4.0.1 (Latest):
+### 0.5 (Kryptonargon update) LATEST:
+- Kryptonite
+- Argonite
+
+### 0.4.0.1 (Github update):
 - Github intergration!
 - Icon
 
-### 0.4:
+### 0.4 (Release):
 - Iridium
 - Autohammer now also requires Tungsten to craft
 - Iridium Claymore
 
-### 0.3:
+### 0.3 (Private Beta 3):
 - Osmite
 - Removed Gold & Platinum Anvil
 - All recipes now require Autohammer
@@ -39,10 +43,10 @@ Do you think you don't have enough weaponary in your arsenal? Craft the autohamm
 - Steel Missile
 - Osmite Handgun
 
-### 0.2:
+### 0.2 (Private Beta 2):
 - Steel (excludes steel armor)
 - **UNUSED** Osmite armor
 
-### 0.1:
+### 0.1 (Private Beta 1):
 - Bronze
 - Gold & Platinum Anvil
